@@ -1,0 +1,90 @@
+# MotoRoute — Product Requirements Document (PRD)
+
+## 1. Product Vision
+MotoRoute is an iOS community app for motorcycle riders to plan rides, save them for later, and share verified routes they have actually ridden. Instead of relying on generic point-to-point directions, riders discover routes vetted by other motorcyclists—complete with real photos, road conditions, stops, and star ratings.
+
+**Core Loop:**
+**Plan** a route → **Ride** it → Get **Reminded** → **Publish** with photos & tips → **Discover** & rate other rides.
+
+---
+
+## 2. Target Audience
+- Everyday and weekend motorcycle riders who want to discover scenic, twisty, or reliable routes near them.
+- Riders who already use Google Maps to plan or navigate, but want a dedicated place to save, organize, and share their favorite rides with the community.
+
+---
+
+## 3. Core Features & Screens
+
+### 3.1 Login & Onboarding
+- Riders sign in quickly using their **Google account** (with **Apple Sign-In** alongside it for iOS).
+- On first login, their basic profile (name and photo) is set up automatically so they can jump straight into the feed.
+
+### 3.2 Explore Feed (Home)
+The main screen where riders discover published routes.
+- **Two Feed Views:**
+  - **Nearby:** Shows rides closest to the rider's current area.
+  - **Popular:** Shows the highest-rated and most-reviewed rides.
+- **Ride Card Layout:**
+  - **Top:** A clean map preview showing the route path, with a small badge indicating the ride's difficulty (e.g., *Beginner*, *Intermediate*, *Technical*).
+  - **Bottom:** Ride title, starting area, highlighted stats (distance and estimated ride time), and the average star rating with review count (e.g., `★ 4.8 (24)`).
+
+### 3.3 Plan a Ride (Private Drafts)
+Allows riders to map out a future trip before they hit the road.
+- **Route Builder:** Pick a starting point (Point A), add optional stops (gas stations, diners, viewpoints), and pick a destination (Point B).
+- **Details:** Give the ride a title and optionally set a **Planned Ride Date**.
+- **Reminder Toggle:** Option to turn on *"Remind me to publish after the ride."*
+- **Two Ways to Save:**
+  - **Save as Planned Ride:** Keeps the route private in the rider's profile so they can use it when ride day arrives.
+  - **Publish Now:** For riders who are recreating a favorite route they have already ridden and want to share immediately.
+
+### 3.4 Post-Ride Reminder Notification
+- If a rider saves a Planned Ride with a date, the app sends a friendly reminder after the ride date: *"Hey, how was [Ride Title]? Don't forget to publish your ride!"*
+- Tapping the notification opens the ride directly to the **Publish** flow.
+
+### 3.5 "I Rode This" Publish Flow
+A fast, under-60-second checklist to turn a Planned Ride into a public recommendation:
+1. **Add Photos:** Upload up to 5 photos from the trip.
+2. **Quick-Tap Tags:**
+   - **Difficulty:** Beginner / Intermediate / Technical
+   - **Road Surface:** Paved / Mix / Gravel
+   - **Vibe & Alerts:** Scenic, Twisty, Chill, Good Food, Potholes, No Gas Stations.
+3. **Rider Notes + AI Polish:** A short text box (*"Any tips for other riders?"*) with an optional **"Enhance with AI"** button that turns the stops, stats, tags, and quick notes into a clean, readable route description.
+4. **Publish:** Moves the ride from private to the public Explore Feed.
+
+### 3.6 Ride Detail & Reviews
+The full view when a rider taps any card.
+- **Interactive Map:** Zoomable map showing the full route and stops, with a prominent **"Open in Google Maps"** button so the rider can immediately navigate it.
+- **Ride Info:** Title, author's name and motorcycle model, key stats (distance, time, difficulty, surface), photo gallery, and route description.
+- **If Viewing Your Own Planned Ride:** Shows a clear **"I Rode This — Publish"** button.
+- **Ratings & Reviews (Published Rides):** Riders can leave a **1–5 star rating** and an optional comment (e.g., road hazards, best time of day to go, food recommendations).
+
+### 3.7 Rider Profile
+- **Basic Info:** Profile photo, display name, and a short bio.
+- **My Garage:** Details about their motorcycle (Make, Model, Year, and Bike Type—e.g., *Sport, Cruiser, Adventure, Naked*).
+- **My Rides (Two Tabs):**
+  - **Published Rides:** Public routes they have shared.
+  - **Planned Rides:** Private drafts they haven't ridden yet.
+
+---
+
+## 4. Navigation Structure
+Simple 3-tab bottom bar:
+1. **Explore** (Feed)
+2. **+ Plan** (Create a new route)
+3. **Profile** (Garage + Published & Planned rides)
+
+---
+
+## 5. Community Safety & Trust
+- Riders can **report** any inappropriate ride or review.
+- Riders can **block** other users.
+- Riders can **delete their account** and associated data from Profile Settings.
+
+---
+
+## 6. Out of Scope (Not in Version 1)
+To keep the first version focused and fast to launch, the following are intentionally excluded:
+- Built-in turn-by-turn voice navigation (riders hand off to Google Maps).
+- Live background GPS ride recording.
+- Group ride scheduling, RSVPs, or in-app chat.
